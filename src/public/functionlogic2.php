@@ -20,7 +20,7 @@ class Database{
 
 class FebSpendings{
   private $pdo;
-  private $select;
+  private $sql;
   private $statement;
   private $spendings;
   private $febspendings;
@@ -29,7 +29,7 @@ class FebSpendings{
   public function __construct($pdo){
     $this->pdo = $pdo;
     //defined to select data from spendings table
-    $this->select = "SELECT * FROM spendings";
+    $this->sql = "SELECT * FROM spendings";
     //prepare sql statement by using pdo()
     $this->statement = $this->pdo->prepare($this->select);
     //push query to DB and run the code
