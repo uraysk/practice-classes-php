@@ -31,7 +31,7 @@ class FebSpendings{
     //defined to select data from spendings table
     $this->sql = "SELECT * FROM spendings";
     //prepare sql statement by using pdo()
-    $this->statement = $this->pdo->prepare($this->select);
+    $this->statement = $this->pdo->prepare($this->sql);
     //push query to DB and run the code
     $this->statement->execute();
     //fetch all datas form spendings table
